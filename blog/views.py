@@ -17,7 +17,7 @@ def blog_category(request,category):
 		)
 	context = {
 	"category": category,
-	"posts": posts
+	"posts": posts,
 	}
 	return render(request, "blog_category.html",context)
 
