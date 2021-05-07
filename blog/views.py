@@ -4,9 +4,9 @@ from blog.forms import CommentForm
 
 # Create your views here.
 def blog_index(request):
-	post = Post.objects.all.order_by('-created_on')
+	post = Post.objects.all().order_by('-created_on')
 	context = {
-		"posts": posts,
+		"posts": post,
 	}
 	return render(request, "blog_index.html", context)
 
@@ -18,7 +18,7 @@ def blog_category(request,category):
 		)
 	context = {
 	"category": category,
-	"posts": posts,
+	"posts": post,
 	}
 	return render(request, "blog_category.html",context)
 
