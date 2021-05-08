@@ -8,9 +8,9 @@
 
     <hr>
 
-    {% for post in posts %}
+    {% for post in post %}
 
-        <h2><a href="{% url 'blog_detail' post.pk%}">{{ post.title }}</a></h2>
+        <h2><a href="{% url 'blog_details' post.pk%}">{{ post.title }}</a></h2>
 
         <small>
 
