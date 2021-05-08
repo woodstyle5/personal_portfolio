@@ -44,4 +44,4 @@ def blog_details(request, pk):
 		"form": form,
 	}
 
-	return render(request, "blog_details.html", context)
+	return render(request, "blog_detail.html", context)
